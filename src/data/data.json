@@ -1,0 +1,192 @@
+{
+  "Header": {
+    "title": "Seniors! Live Your Best Years",
+    "paragraph": "CareONE provides consistent preventative care for you – week after week, month after month and year after year."
+  },
+  "About": {
+    "paragraph": "Our company has been in the preventative wellness business for many, many years. We are experts on Medicare benefits for Seniors and we know how to provide these services to Seniors conveniently easily and professionally using telehealth technology. Our clinical team consists of nurses, pharmacists and physicians who are licensed in all States in which we do business. Our goal is simple: CareONE Concierge wants to keep all Medicare patients informed of their preventative and wellness benefits and provide those benefits in a caring, long-term manner. If we do our job correctly, our patients will stay out of the emergency room and hospital which will help keep Medicare’s spending as low as possible. We’re all in this together. We need to take care of ourselves for a longer, happier life and keep our healthcare costs as low as possible so Medicare stays around for a long, long time. Contact us today and one of our agents will answer all your questions",
+    "Why": [
+      "Nurses to help answer your questions",
+      "Pharmacists to help you with your medications"
+    ],
+    "Why2": [
+      "Physicians to oversee all of your care",
+      "Physicians to make timely recommendations"
+    ]
+  },
+  "Experience": {
+    "paragraph": "CareONE’s Clinical Team has years of experience dealing with Medicare patients.",
+    "Why": [
+      "Helps keep you healthy for life",
+      "Focuses on your chronic problems",
+      "Provides care that is above and beyond"
+    ],
+    "Why2": [
+      "Coordinates care with YOUR primary care physician at all times",
+      "Approved services offered by Medicare – to help keep YOU as healthy as possible"
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    }
+  ],
+  "Services": [
+    {
+      "icon": "fa fa-stethoscope",
+      "name": "Health Risk Assessment",
+      "text": "Your care starts with a complete assessment of your health by our physicians."
+    },
+    {
+      "icon": "fa fa-heartbeat",
+      "name": "Clinical Track",
+      "text": "CareONE has made a huge difference in my life by helping me understand my health better and what I can do to take control of my health."
+    },
+    {
+      "icon": "fa fa-stethoscope",
+      "name": "Chronic Care Management",
+      "text": "If you qualify you may be eligible for on-going watchful care for any problems you may have. This care goes on every week, month and year."
+    },
+    {
+      "icon": "fa fa-heartbeat",
+      "name": "Specialty Care",
+      "text": "You will also be offered other Medicare services such as Advance Care Planning to help you create a Living Will, Power of Attorney, etc. All at your choice and discretion."
+    },
+    {
+      "icon": "fa fa-heart",
+      "name": "Remote Patient Monitoring",
+      "text": "You may also choose to have a pharmacist monitor your medications and look for less-expensive choices that you can afford."
+    },
+    {
+      "icon": "fa fa-medkit",
+      "name": "Other Services",
+      "text": "CareONE offers other Medicare-approved services to help you with your health and wellness. As we take this journey together, our physicians will keep you informed all the way."
+    }
+  ],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "\"CareONE has made a huge difference in my life by helping me understand my health better and what I can do to take control of my health.\"",
+      "name": "Willy S"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "\"Thanks to CareONE, I finally feel empowered in managing my health. Their support and guidance have been life-changing.\"",
+      "name": "Dolores A"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "\"CareONE helped me take charge of my wellness. I now have the tools and confidence to stay on top of my health.\"",
+      "name": "Jack F"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "text": "\"With CareONE, I feel more informed about my health than ever before. Their care has been instrumental in my journey.\"",
+      "name": "Shari L"
+    },
+    {
+      "img": "img/testimonials/05.jpg",
+      "text": "\"The personalized attention from CareONE has given me the knowledge I need to improve my health and well-being.\"",
+      "name": "Edgar J"
+    },
+    {
+      "img": "img/testimonials/06.jpg",
+      "text": "\"CareONE provided the insights I was missing. I now understand my health better and have taken important steps to improve it.\"",
+      "name": "Jing P"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Director"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Mike Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Jane Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Karen Doe",
+      "job": "Project Manager"
+    }
+  ],
+  "Contact": {
+    "address": "612 E Paces Ferry Rd NE Atlanta GA 30305",
+    "phone": "(888) 614-4661",
+    "email": "info@careone-concierge.com",
+    "facebook": "https://www.facebook.com/p/CareONE-Concierge-100063884209916/",
+    "linkedin": "https://www.linkedin.com/company/careone-concierge/",
+    "instagram": "https://www.instagram.com/p/C-Hqzupx2vn/"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-comments-o",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-bullhorn",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-magic",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    }
+  ]
+}
