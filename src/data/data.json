@@ -1,7 +1,7 @@
 {
   "Header": {
-    "title": "Seniors! Live Your Best Years",
-    "paragraph": "CareONE provides consistent preventative care for you – week after week, month after month and year after year."
+    "title": "Welcome Medicare Insurance Agents!",
+    "paragraph": ""
   },
   "About": {
     "paragraph": "Our company has been in the preventative wellness business for many, many years. We are experts on Medicare benefits for Seniors and we know how to provide these services to Seniors conveniently easily and professionally using telehealth technology. Our clinical team consists of nurses, pharmacists and physicians who are licensed in all States in which we do business. Our goal is simple: CareONE Concierge wants to keep all Medicare patients informed of their preventative and wellness benefits and provide those benefits in a caring, long-term manner. If we do our job correctly, our patients will stay out of the emergency room and hospital which will help keep Medicare’s spending as low as possible. We’re all in this together. We need to take care of ourselves for a longer, happier life and keep our healthcare costs as low as possible so Medicare stays around for a long, long time. Contact us today and one of our agents will answer all your questions",
@@ -15,15 +15,23 @@
     ]
   },
   "Experience": {
-    "paragraph": "CareONE’s Clinical Team has years of experience dealing with Medicare patients.",
+    "paragraph": "As you recall, CareONE offers the following services to its patients:",
     "Why": [
-      "Helps keep you healthy for life",
-      "Focuses on your chronic problems",
-      "Provides care that is above and beyond"
+      "Annual Wellness Visit ",
+      "Vision screening",
+      "Hearing Screening",
+      "Dental Screening",
+      "Diet Screening",
+      "Pain Screening",
+      "Cognitive Impairment Screening"
     ],
     "Why2": [
-      "Coordinates care with YOUR primary care physician at all times",
-      "Approved services offered by Medicare – to help keep YOU as healthy as possible"
+      "Fall Risk Screening",
+      "Tobacco Use Screening",
+      "Alcohol Use Screening",
+      "Home Safety-Screening",
+      "Advance Care Planning",
+      "Medication Reconciliation and much, much more!"
     ]
   },
   "Gallery": [
