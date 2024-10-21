@@ -311,12 +311,12 @@ export const Contact = (props) => {
                 </div>
                 <div className="form-group">
                   <input
-                    type="date"
+                    type="text"
                     id="dob"
                     name="dob"
                     value={dob}
                     className="form-control"
-                    placeholder="Your Client’s DOB"
+                    placeholder="Your Client’s DOB(YYYY-MM-DD)"
                     required
                     onChange={handleChange}
                   />
