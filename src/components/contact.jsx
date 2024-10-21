@@ -296,37 +296,31 @@ export const Contact = (props) => {
                   />
                   <p className="help-block text-danger"></p>
                 </div>
-                <div className="row mt-6">
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        id="medicare_number"
-                        name="medicare_number"
-                        className="form-control"
-                        placeholder="Your Client’s Medicare Number"
-                        value={medicare_number}
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="date"
-                        id="dob"
-                        name="dob"
-                        value={dob}
-                        className="form-control"
-                        placeholder="Your Client’s DOB"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
+                <div className="form-group">
+                  <input
+                    type="text"
+                    id="medicare_number"
+                    name="medicare_number"
+                    className="form-control"
+                    placeholder="Your Client’s Medicare Number"
+                    value={medicare_number}
+                    required
+                    onChange={handleChange}
+                  />
+                  <p className="help-block text-danger"></p>
+                </div>
+                <div className="form-group">
+                  <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                    value={dob}
+                    className="form-control"
+                    placeholder="Your Client’s DOB"
+                    required
+                    onChange={handleChange}
+                  />
+                  <p className="help-block text-danger"></p>
                 </div>
                 <div id="success"></div>
                 <button type="submit" className="btn btn-custom btn-lg">
