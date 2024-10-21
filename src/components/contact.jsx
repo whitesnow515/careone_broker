@@ -316,7 +316,7 @@ export const Contact = (props) => {
                     name="dob"
                     value={dob}
                     className="form-control"
-                    placeholder="Your Client’s DOB(YYYY-MM-DD)"
+                    placeholder="Your Client’s DOB (MM/DD/YYYY)"
                     required
                     onChange={handleChange}
                   />
