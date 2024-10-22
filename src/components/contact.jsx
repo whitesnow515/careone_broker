@@ -60,7 +60,7 @@ export const Contact = (props) => {
     try {
       const response = await axios.post(`${API_ENDPOINTS.pro}/api/send-email`,
         {
-          email: broker_email
+          email: email_address
         }
       );
       if (response.status === 200 || response.status === 204) {
