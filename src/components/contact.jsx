@@ -60,6 +60,7 @@ export const Contact = (props) => {
       );
       if (response.status === 200 || response.status === 204) {
         alert("Sent successfully !");
+        setState({...initialState});
       }else{
         alert("Failed !");
       }
