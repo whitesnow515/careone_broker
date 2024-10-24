@@ -23,11 +23,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const initialState = {
-  broker_first_name: "",
-  broker_last_name: "",
-  broker_email: "",
-  broker_phone_number: "",
-  agent_number: "",
   first_name: "",
   last_name: "",
   email_address: "",
@@ -60,7 +55,7 @@ export const Contact = (props) => {
     try {
       const response = await axios.post(`${API_ENDPOINTS.pro}/api/send-email`,
         {
-          email: email_address
+          firstName: first_name, lastName: last_name, email: email_address, phone: phone_number, broker_first_name, broker_last_name, broker_email, agent_number, broker_phone_number, dob, medicare_number
         }
       );
       if (response.status === 200 || response.status === 204) {
