@@ -239,9 +239,9 @@ export const Contact = (props) => {
                     <div className="form-group">
                       <input
                         type="text"
-                        id="last_name"
-                        name="last_name"
-                        value={last_name}
+                        id="first_name"
+                        name="first_name"
+                        value={first_name}
                         className="form-control"
                         placeholder="Your Client’s First Name"
                         required
@@ -254,11 +254,11 @@ export const Contact = (props) => {
                     <div className="form-group">
                       <input
                         type="text"
-                        id="first_name"
-                        name="first_name"
+                        id="last_name"
+                        name="last_name"
                         className="form-control"
                         placeholder="Your Client’s Last Name"
-                        value={first_name}
+                        value={last_name}
                         required
                         onChange={handleChange}
                       />
