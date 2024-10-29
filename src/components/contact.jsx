@@ -1,11 +1,5 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
 import React from "react";
-import Checkbox from '@mui/material/Checkbox';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -13,7 +7,6 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
-import FormLabel from '@mui/material/FormLabel';
 import axios from 'axios';
 import Divider from '@mui/material/Divider';
 import { API_ENDPOINTS } from "../config/env";
@@ -22,18 +15,20 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const initialState = {
-  first_name: "",
-  last_name: "",
-  email_address: "",
-  phone_number: "",
-  medicare_number: "",
-  dob: ""
-};
 export const Contact = (props) => {
-  const [{ broker_first_name, broker_last_name, broker_email, agent_number, 
-    broker_phone_number, first_name, last_name, email_address, 
-    phone_number, medicare_number, dob }, setState] = useState(initialState);
+  const [data, setData] = useState({
+      first_name: "",
+      last_name: "",
+      email_address: "",
+      phone_number: "",
+      medicare_number: "",
+      dob: "",
+      broker_first_name: "",
+      broker_last_name: "",
+      broker_email: "",
+      agent_number: "",
+      broker_phone_number: ""
+    });
   const [open, setOpen] = React.useState(false);
 
 
@@ -48,19 +43,27 @@ export const Contact = (props) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setState((prevState) => ({ ...prevState, [name]: value }));
+    setData((prevState) => ({ ...prevState, [name]: value }));
   };  
 
   const sendEmail = async () => {
     try {
       const response = await axios.post(`${API_ENDPOINTS.pro}/api/send-email`,
         {
-          firstName: first_name, lastName: last_name, email: email_address, phone: phone_number, broker_first_name, broker_last_name, broker_email, agent_number, broker_phone_number, dob, medicare_number
+          firstName: data.first_name, lastName: data.last_name, email: data.email_address, phone: data.phone_number, broker_first_name: data.broker_first_name, broker_last_name: data.broker_last_name, broker_email: data.broker_email, agent_number: data.agent_number, broker_phone_number: data.broker_phone_number, dob: data.dob, medicare_number: data.medicare_number
         }
       );
       if (response.status === 200 || response.status === 204) {
         alert("Sent successfully !");
-        setState({...initialState});
+        setData((prevState) => ({ 
+          ...prevState, 
+          first_name: "",
+          last_name: "",
+          email_address: "",
+          phone_number: "",
+          medicare_number: "",
+          dob: ""
+        }));
       }else{
         alert("Failed !");
       }
@@ -74,7 +77,7 @@ export const Contact = (props) => {
     try {
       const response = await axios.post(`${API_ENDPOINTS.pro}/api/saveBrokerData`, 
         {
-          firstName: first_name, lastName: last_name, email: email_address, phone: phone_number, broker_first_name, broker_last_name, broker_email, agent_number, broker_phone_number, dob, medicare_number
+          firstName: data.first_name, lastName: data.last_name, email: data.email_address, phone: data.phone_number, broker_first_name: data.broker_first_name, broker_last_name: data.broker_last_name, broker_email: data.broker_email, agent_number: data.agent_number, broker_phone_number: data.broker_phone_number, dob: data.dob, medicare_number: data.medicare_number
         }
       );
       if (response.status === 200 || response.status === 204) {
@@ -90,42 +93,33 @@ export const Contact = (props) => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (broker_last_name === "" ) {
+    console.log(data.last_name, data.broker_last_name, "--->>>");
+    if (data.broker_last_name === "" || data.broker_last_name === undefined) {
       alert("Your last name is required !");
       return;
     }  
-    if (broker_email === "" ) {
+    if (data.broker_email === "" || data.broker_email === undefined) {
       alert("Your email is required !");
       return;
     }  
-    if (broker_phone_number === "" ) {
+    if (data.broker_phone_number === "" || data.broker_phone_number === undefined) {
       alert("Your phone is required !");
       return;
     }  
-    if (last_name === "" ) {
+    if (data.last_name === "" || data.last_name === undefined) {
       alert("Client's last name is required !");
       return;
     }
-    if (email_address === "" ) {
+    if (data.email_address === "" || data.email_address === undefined) {
       alert("Client's email is required !");
       return;
     }
-    if (phone_number === "" ) {
+    if (data.phone_number === "" || data.phone_number === undefined) {
       alert("Client's phone is required !");
       return;
     }
     requestData();
-    
-    // emailjs.send('service_jqr774k', 'template_7gg2vl9', {
-    //   broker_first_name, broker_last_name, broker_email, broker_phone_number
-    // }, 'CXpMtCeRuYT0VXv2a')
-    // .then((result) => {
-    //   alert("Sent successfully !");
-    //   setState({...initialState});
-    // }, (error) => {
-    //   alert('Error:', error.text);
-    //   console.log('Error:', error.text);
-    // });
+
   };
 
 
@@ -171,7 +165,7 @@ export const Contact = (props) => {
                         name="broker_first_name"
                         className="form-control"
                         placeholder="Your First Name"
-                        value={broker_first_name}
+                        value={data.broker_first_name}
                         required
                         onChange={handleChange}
                       />
@@ -184,7 +178,7 @@ export const Contact = (props) => {
                         type="text"
                         id="broker_last_name"
                         name="broker_last_name"
-                        value={broker_last_name}
+                        value={data.broker_last_name}
                         className="form-control"
                         placeholder="Your Last Name"
                         required
@@ -200,7 +194,7 @@ export const Contact = (props) => {
                     id="agent_number"
                     name="agent_number"
                     className="form-control"
-                    value={agent_number}
+                    value={data.agent_number}
                     placeholder="Your Agent Number"
                     required
                     onChange={handleChange}
@@ -213,7 +207,7 @@ export const Contact = (props) => {
                     id="broker_email"
                     name="broker_email"
                     className="form-control"
-                    value={broker_email}
+                    value={data.broker_email}
                     placeholder="Your Email Address"
                     required
                     onChange={handleChange}
@@ -226,7 +220,7 @@ export const Contact = (props) => {
                     id="broker_phone_number"
                     name="broker_phone_number"
                     className="form-control"
-                    value={broker_phone_number}
+                    value={data.broker_phone_number}
                     placeholder="Your Phone Number"
                     required
                     onChange={handleChange}
@@ -241,7 +235,7 @@ export const Contact = (props) => {
                         type="text"
                         id="first_name"
                         name="first_name"
-                        value={first_name}
+                        value={data.first_name}
                         className="form-control"
                         placeholder="Your Client’s First Name"
                         required
@@ -258,7 +252,7 @@ export const Contact = (props) => {
                         name="last_name"
                         className="form-control"
                         placeholder="Your Client’s Last Name"
-                        value={last_name}
+                        value={data.last_name}
                         required
                         onChange={handleChange}
                       />
@@ -272,7 +266,7 @@ export const Contact = (props) => {
                     id="email_address"
                     name="email_address"
                     className="form-control"
-                    value={email_address}
+                    value={data.email_address}
                     placeholder="Your Client’s Email"
                     required
                     onChange={handleChange}
@@ -285,7 +279,7 @@ export const Contact = (props) => {
                     id="phone_number"
                     name="phone_number"
                     className="form-control"
-                    value={phone_number}
+                    value={data.phone_number}
                     placeholder="Your Client’s Phone Number"
                     required
                     onChange={handleChange}
@@ -299,7 +293,7 @@ export const Contact = (props) => {
                     name="medicare_number"
                     className="form-control"
                     placeholder="Your Client’s Medicare Number"
-                    value={medicare_number}
+                    value={data.medicare_number}
                     required
                     onChange={handleChange}
                   />
@@ -310,7 +304,7 @@ export const Contact = (props) => {
                     type="text"
                     id="dob"
                     name="dob"
-                    value={dob}
+                    value={data.dob}
                     className="form-control"
                     placeholder="Your Client’s DOB (MM/DD/YYYY)"
                     required
